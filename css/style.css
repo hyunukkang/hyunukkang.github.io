@@ -1,0 +1,144 @@
+@charset "utf-8";
+@import "reset.css";
+@import "common.css";
+
+
+/* header */
+
+/* section.home */
+section.home {
+    background: url(../images/section.home/homeBg.png) no-repeat center/cover;
+}
+section.home .inner {
+    position: relative;
+    height: 100vh;
+}
+section.home:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: #000;
+    opacity: .5;
+}
+.home__title {
+    position: absolute;
+    top: 50%;
+    left: 48%;
+    transform: translate(-50%, -50%);
+    color: #91bd0f;
+    z-index: 1;
+}
+.home__title h1 {
+    font-size: 80px;
+}
+.home__title p {
+    font-size: 50px;
+    text-align: right;
+}
+.home__icon {
+    position: absolute;
+    color: #fff;
+    top: 70%;
+    z-index: 1;
+}
+.home__icon i {
+    display: block;
+    margin-bottom: 10px;
+}
+.scroll__img {
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+}
+/* section about-skills */
+section.about-skills {
+    padding: 100px 0 100px 0;
+    width: 100%;
+}
+section.about-skills .inner {
+    position: relative;
+}
+.sub-title {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.sub-title h3 {
+    display: inline-block;
+}
+.sub-title h3:nth-of-type(1) {
+    margin-right: 300px;
+}
+.about-skills-wrap {
+    position: relative;
+    height: 462px;
+}
+.about-skills-sprout {
+    position: absolute;
+    left: 39%;
+}
+.about__keyword__item {
+    font-size: var(--medium-font-size);
+    position: absolute;
+}
+.about__keyword__item:nth-child(1) {
+    top: 23%;
+    left: 37.5%;
+}
+.about__keyword__item:nth-child(2) {
+    top: 34.5%;
+    left: 61%;
+}
+.about__keyword__item:nth-child(3) {
+    top: 51%;
+    left: 32.8%;
+}
+.about__keyword__item:nth-child(4) {
+    top: 56.5%;
+    left: 62.2%;
+}
+.about__keyword__item img {
+    padding-top: 5px;
+}
+/* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+.skills {
+    width: 1200px;
+    margin: 0 auto;
+    background: #50586C;
+    color: #DCE2F0;
+}
+.skills__item:nth-of-type(1) {
+    background: url(../images/section.about.skills/soilBg-1.png);
+}
+.skills__item:nth-of-type(2) {
+    background: url(../images/section.about.skills/soilBg-2.png);
+}
+.skills__item:nth-of-type(3) {
+    background: url(../images/section.about.skills/soilBg-3.png);
+}
+.skills__title {
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    padding: 5rem;
+    align-items: center;
+    cursor: pointer;
+}
+.skills__desc {
+    padding: 1rem;
+    color: #50586C;
+    background: #DCE2F0;
+}
+.skills_icon {
+    font-size: 5rem;
+    transition: 300ms;
+    margin-right: -10px;
+}
+.skills_icon.visible {
+    transform: rotate(-180deg);
+}

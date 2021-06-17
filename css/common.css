@@ -1,0 +1,21 @@
+@charset "utf-8";
+
+:root {
+    /* color */
+    --primary-color: #91bd0f;
+    --sub-color: #613c16;
+    --title-color: #232429;
+    --bg-color: #292929;
+    --point-color: #98dbf8;
+    --desc-color: #ddd;
+    /* typography */
+    font-size: 62.5%;
+    --h2-font-size: 3.6rem;
+    --h3-font-size: 3rem;
+    --medium-font-size: 2.4rem;
+    --regular-font-size: 2rem;
+}
+.inner {
+    max-width: 1400px;
+    margin: 0 auto;
+}
