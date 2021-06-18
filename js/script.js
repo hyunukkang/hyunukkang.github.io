@@ -69,12 +69,12 @@ $(function(){
     });
     // skills accordion
     var $skillsTitle = $('.skills__title')
-    var $skillsDesc = $('.skills__desc');
+    var $skillsProgressWrap = $('.skills__progress__wrap');
     var $skillsIcon = $('.skills_icon');
     
-    $skillsDesc.hide();
+    $skillsProgressWrap.hide();
     $skillsTitle.click(function(){
-    $skillsDesc.stop().slideUp();
+    $skillsProgressWrap.stop().slideUp();
     $(this).siblings().stop().slideToggle();
     $(this).children().toggleClass('visible');
     })
