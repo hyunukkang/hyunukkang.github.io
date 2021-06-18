@@ -16,6 +16,7 @@ img {
 }
 h2 {
     font-size: var(--h2-font-size);
+    color: var(--title-color)
 }
 h3 {
     font-size: var(--h3-font-size);

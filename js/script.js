@@ -1,6 +1,48 @@
 
 
 $(function(){
+    // header
+    // header scroll event
+    var $header = $('#header');
+    var $toggleSpan = $(".toggle span")
+    var $gnb = $('.gnb')
+    $(window).scroll(function(){
+        var scrollTop = $(window).scrollTop();
+        var headerHeight = $('#header').outerHeight();
+        var homeHeight = $('#home').outerHeight();
+        if( scrollTop > headerHeight ){
+            $header.addClass('fixed')
+            $toggleSpan.addClass('fixed')
+        }else{
+            $header.removeClass('fixed');
+            $toggleSpan.removeClass('fixed');
+        }
+        if(scrollTop > homeHeight ){
+            $header.addClass('color')
+            $toggleSpan.addClass('color')
+            $gnb.addClass('color')
+        }else{
+            $header.removeClass('color')
+            $toggleSpan.removeClass('color')
+            $gnb.removeClass('color')
+        }
+    })
+    // gnb ele
+    var $toggle = $('.toggle'),
+    $gnb = $('.gnb');
+    $($toggle).click(function(){
+        $(this).toggleClass('active');
+        $($gnb).toggleClass('visible');
+    })
+    // gnb__item window scroll
+    var $gnbMenu = $('.gnb__menu');
+    $gnbMenu.click(function(){
+        var target = $(this).attr('data-target');
+        var $target = $(target);
+        var distance = $target.offset().top;
+        $('html, body').animate({scrollTop: distance})
+    })
+
     // >>>>>>>>>>>>>>>>>>> tab
     var $subTitleTab = $('.sub__title__tab');
     var $aboutKeyword = $('.about__keyword');
@@ -36,11 +78,18 @@ $(function(){
     $(this).siblings().stop().slideToggle();
     $(this).children().toggleClass('visible');
     })
+    // skills progress
+    $('.pie_progress').asPieProgress({
+        namespace: 'pie_progress'
+    });
+    $('.pie_progress').asPieProgress('start');
+    
+
 
     // portfolio slider
     $('.custom__slider').slick({
         dots:true,
-        /* autoplay: true,
-        autoplaySpeed: 2000, */
+        autoplay: true,
+        autoplaySpeed: 2000,
     });
 })

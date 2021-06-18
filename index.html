@@ -6,17 +6,48 @@
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
 <link rel="stylesheet" href="./css/style.css">
 <link rel="stylesheet" type="text/css" href ="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+<link rel="stylesheet" href="./css/asPieProgress.min.css">
 <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
 <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
 <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<script src="./js/jquery-asPieProgress.min.js"></script>
 <script src="./js/script.js"></script>
 <title>개인 포폴 사이트</title>
 </head>
 <body>
 
-    <header></header>
-    <section class="home">
+    <!-- header -->
+    <header id="header" class="header">
+        <div class="inner">
+            <h1 class="logo">
+                hyunuk
+            </h1>
+            <div class="toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="gnb">
+                <li class="gnb__item">
+                    <!-- data - 이름 ex) data-link, data-target, data-color -->
+                    <a href="#" class="gnb__menu" data-target="#home">HOME</a>
+                </li>
+                <li class="gnb__item">
+                    <a href="#" class="gnb__menu" data-target="#about-skills">ABOUT & SKILLLS</a>
+                </li>
+                <li class="gnb__item">
+                    <a href="#" class="gnb__menu" data-target="#portfolio">PORTFOLIO</a>
+                </li>
+                <li class="gnb__item">
+                    <a href="#" class="gnb__menu" data-target="#contact">CONTACT</a>
+                </li>
+            </ul>
+        </div>
+    </header>
+    <!-- section.home -->
+    <section id="home" class="home">
         <div class="home__title">
             <h1>Publisher & Designer</h1>
             <p>
@@ -30,12 +61,13 @@
                 </a>
                 <a href="#">
                     <i class="xi-naver-square xi-5x"></i>
-                </a>
+                </a>    
             </div>
             <img src="./images/section.home/mouse.png" alt="scroll mouse image" class="scroll__img">
         </div>
     </section>
-    <section class="about-skills">
+    <!-- section.about-skills -->
+    <section id="about-skills" class="about-skills">
         <div class="inner">
             <h2 class="title">
                 About &amp; Skills
@@ -98,40 +130,144 @@
                         <h3>PUBLISHING</h3>
                         <i class="uil uil-angle-down skills_icon"></i>
                     </div>
-                    <p class="skills__desc">
-                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aspernatur magnam autem qui! Culpa repellendus quo nam iste quod harum ut aliquam sequi voluptates, blanditiis exercitationem esse, modi in soluta atque.
-                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aspernatur magnam autem qui! Culpa repellendus quo nam iste quod harum ut aliquam sequi voluptates, blanditiis exercitationem esse, modi in soluta atque.
-                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aspernatur magnam autem qui! Culpa repellendus quo nam iste quod harum ut aliquam sequi voluptates, blanditiis exercitationem esse, modi in soluta atque.
-                    </p>
+                    <div class="skills__progress__wrap">
+                        <div class="skills__progress__container">
+                            <div class="skills__progress_item">
+                                <span>HTML</span>
+                                <div class="pie_progress" role="progressbar" data-barcolor="var(--point-color)" data-goal="80" data-barsize="8">
+                                    <div class="pie_progress__number">0%</div>
+                                </div>
+                            </div>
+                            <div class="skills__progress_item">
+                                <span>HTML</span>
+                                <div class="pie_progress" role="progressbar" data-barcolor="var(--point-color)" data-goal="80" data-barsize="8">
+                                    <div class="pie_progress__number">0%</div>
+                                </div>
+                            </div>
+                            <div class="skills__progress_item">
+                                <span>HTML</span>
+                                <div class="pie_progress" role="progressbar" data-barcolor="var(--point-color)" data-goal="80" data-barsize="8">
+                                    <div class="pie_progress__number">0%</div>
+                                </div>
+                            </div>
+                            <div class="skills__progress_item">
+                                <span>HTML</span>
+                                <div class="pie_progress" role="progressbar" data-barcolor="var(--point-color)" data-goal="80" data-barsize="8">
+                                    <div class="pie_progress__number">0%</div>
+                                </div>
+                            </div>
+                            <div class="skills__progress_item">
+                                <span>HTML</span>
+                                <div class="pie_progress" role="progressbar" data-barcolor="var(--point-color)" data-goal="80" data-barsize="8">
+                                    <div class="pie_progress__number">0%</div>
+                                </div>
+                            </div>
+                            <div class="skills__progress_item">
+                                <span>HTML</span>
+                                <div class="pie_progress" role="progressbar" data-barcolor="var(--point-color)" data-goal="80" data-barsize="8">
+                                    <div class="pie_progress__number">0%</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </li>
                 <li class="skills__item">
                     <div class="skills__title">
                         <h3>DESIGN</h3>
                         <i class="uil uil-angle-down skills_icon"></i>
                     </div>
-                    <p class="skills__desc">
-                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aspernatur magnam autem qui! Culpa repellendus quo nam iste quod harum ut aliquam sequi voluptates, blanditiis exercitationem esse, modi in soluta atque.
-                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aspernatur magnam autem qui! Culpa repellendus quo nam iste quod harum ut aliquam sequi voluptates, blanditiis exercitationem esse, modi in soluta atque.
-                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aspernatur magnam autem qui! Culpa repellendus quo nam iste quod harum ut aliquam sequi voluptates, blanditiis exercitationem esse, modi in soluta atque.
-                    </p>
+                    <div class="skills__progress__wrap">
+                        <div class="skills__progress__container">
+                            <div class="skills__progress_item">
+                                <span>HTML</span>
+                                <div class="pie_progress" role="progressbar" data-barcolor="var(--point-color)" data-goal="80" data-barsize="8">
+                                    <div class="pie_progress__number">0%</div>
+                                </div>
+                            </div>
+                            <div class="skills__progress_item">
+                                <span>HTML</span>
+                                <div class="pie_progress" role="progressbar" data-barcolor="var(--point-color)" data-goal="80" data-barsize="8">
+                                    <div class="pie_progress__number">0%</div>
+                                </div>
+                            </div>
+                            <div class="skills__progress_item">
+                                <span>HTML</span>
+                                <div class="pie_progress" role="progressbar" data-barcolor="var(--point-color)" data-goal="80" data-barsize="8">
+                                    <div class="pie_progress__number">0%</div>
+                                </div>
+                            </div>
+                            <div class="skills__progress_item">
+                                <span>HTML</span>
+                                <div class="pie_progress" role="progressbar" data-barcolor="var(--point-color)" data-goal="80" data-barsize="8">
+                                    <div class="pie_progress__number">0%</div>
+                                </div>
+                            </div>
+                            <div class="skills__progress_item">
+                                <span>HTML</span>
+                                <div class="pie_progress" role="progressbar" data-barcolor="var(--point-color)" data-goal="80" data-barsize="8">
+                                    <div class="pie_progress__number">0%</div>
+                                </div>
+                            </div>
+                            <div class="skills__progress_item">
+                                <span>HTML</span>
+                                <div class="pie_progress" role="progressbar" data-barcolor="var(--point-color)" data-goal="80" data-barsize="8">
+                                    <div class="pie_progress__number">0%</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </li>
                 <li class="skills__item">
                     <div class="skills__title">
                         <h3>ET CETERA</h3>
                         <i class="uil uil-angle-down skills_icon"></i>
                     </div>
-                    <p class="skills__desc">
-                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aspernatur magnam autem qui! Culpa repellendus quo nam iste quod harum ut aliquam sequi voluptates, blanditiis exercitationem esse, modi in soluta atque.
-                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aspernatur magnam autem qui! Culpa repellendus quo nam iste quod harum ut aliquam sequi voluptates, blanditiis exercitationem esse, modi in soluta atque.
-                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aspernatur magnam autem qui! Culpa repellendus quo nam iste quod harum ut aliquam sequi voluptates, blanditiis exercitationem esse, modi in soluta atque.
-                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aspernatur magnam autem qui! Culpa repellendus quo nam iste quod harum ut aliquam sequi voluptates, blanditiis exercitationem esse, modi in soluta atque.
-                    </p>
+                    <div class="skills__progress__wrap">
+                        <div class="skills__progress__container">
+                            <div class="skills__progress_item">
+                                <span>HTML</span>
+                                <div class="pie_progress" role="progressbar" data-barcolor="var(--point-color)" data-goal="80" data-barsize="8">
+                                    <div class="pie_progress__number">0%</div>
+                                </div>
+                            </div>
+                            <div class="skills__progress_item">
+                                <span>HTML</span>
+                                <div class="pie_progress" role="progressbar" data-barcolor="var(--point-color)" data-goal="80" data-barsize="8">
+                                    <div class="pie_progress__number">0%</div>
+                                </div>
+                            </div>
+                            <div class="skills__progress_item">
+                                <span>HTML</span>
+                                <div class="pie_progress" role="progressbar" data-barcolor="var(--point-color)" data-goal="80" data-barsize="8">
+                                    <div class="pie_progress__number">0%</div>
+                                </div>
+                            </div>
+                            <div class="skills__progress_item">
+                                <span>HTML</span>
+                                <div class="pie_progress" role="progressbar" data-barcolor="var(--point-color)" data-goal="80" data-barsize="8">
+                                    <div class="pie_progress__number">0%</div>
+                                </div>
+                            </div>
+                            <div class="skills__progress_item">
+                                <span>HTML</span>
+                                <div class="pie_progress" role="progressbar" data-barcolor="var(--point-color)" data-goal="80" data-barsize="8">
+                                    <div class="pie_progress__number">0%</div>
+                                </div>
+                            </div>
+                            <div class="skills__progress_item">
+                                <span>HTML</span>
+                                <div class="pie_progress" role="progressbar" data-barcolor="var(--point-color)" data-goal="80" data-barsize="8">
+                                    <div class="pie_progress__number">0%</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </li>
             </ul>
         </div>
     </section>
-    <!-- portfolio  -->
-    <section class="portfolio" id="portfolio">
+    <!-- section.portfolio  -->
+    <section id="portfolio" class="portfolio">
         <div class="inner">
             <h2 class="title">Protfolio</h2>
             <div class="portfolio__publishing">
@@ -234,7 +370,8 @@
             </div>
         </div>
     </section>
-    <section class="contact">
+    <!-- section.contact -->
+    <section id="contact" class="contact">
         <div class="inner">
             <h2 class="title">contact</h2>
             <form action="#">
