@@ -2,7 +2,7 @@
 
 $(function(){
     // >>>>>>>>>>>>>>>>>>> tab
-    var $subTitleTab = $('.sub-title__tab');
+    var $subTitleTab = $('.sub__title__tab');
     var $aboutKeyword = $('.about__keyword');
     $aboutKeyword.eq(1).hide();
     $subTitleTab.click(function(e){
@@ -35,6 +35,12 @@ $(function(){
     $skillsDesc.stop().slideUp();
     $(this).siblings().stop().slideToggle();
     $(this).children().toggleClass('visible');
-    // $skillsIcon.toggleClass('visible'); /* 사라졌다 / 보였다 */
     })
+
+    // portfolio slider
+    $('.custom__slider').slick({
+        dots:true,
+        /* autoplay: true,
+        autoplaySpeed: 2000, */
+    });
 })

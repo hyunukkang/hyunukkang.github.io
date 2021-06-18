@@ -15,7 +15,26 @@
     --medium-font-size: 2.4rem;
     --regular-font-size: 2rem;
 }
+/* layout */
 .inner {
-    max-width: 1400px;
+    max-width: 1200px;
     margin: 0 auto;
 }
+.clearfix:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+/* grid */
+.l-grid-1-12 { width: 8.33333333%; }
+.l-grid-2-12 { width: 16.66666667%; }
+.l-grid-3-12 { width: 25%; }
+.l-grid-4-12 { width: 33.33333333%; }
+.l-grid-5-12 { width: 41.66666667%; }
+.l-grid-6-12 { width: 50%; }
+.l-grid-7-12 { width: 58.33333333%; }
+.l-grid-8-12 { width: 66.66666667%; }
+.l-grid-9-12 { width: 75%; }
+.l-grid-10-12 { width: 83.33333333%; }
+.l-grid-11-12 { width: 91.66666667%; }
+.l-grid-12-12 { width: 100%;}
