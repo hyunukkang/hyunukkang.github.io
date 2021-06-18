@@ -55,7 +55,19 @@ section.home:after {
     transform: translateX(-50%);
     z-index: 1;
 }
-/* section about-skills */
+/* section.about-skills */
+.sub-title__tabs {
+    text-align: center;
+}
+.sub-title__tab {
+    display: inline-block;
+}
+.sub-title__tab.active {
+    color: var(--primary-color);
+}
+.sub-title__tab:nth-child(1) {
+    margin-right: 20rem;
+}
 section.about-skills {
     padding: 100px 0 100px 0;
     width: 100%;
@@ -74,13 +86,22 @@ section.about-skills .inner {
 .sub-title h3:nth-of-type(1) {
     margin-right: 300px;
 }
-.about-skills-wrap {
+.about-wrap {
     position: relative;
     height: 462px;
 }
-.about-skills-sprout {
+.about__photo {
     position: absolute;
     left: 39%;
+    text-align: center;
+}
+.about__keyword:nth-of-type(2) .about__keyword__item:nth-child(1) {
+    top: 23%;
+    left: 32.3%;
+}
+.about__keyword:nth-of-type(2) .about__keyword__item:nth-child(3) {
+    top: 51%;
+    left: 29.4%;
 }
 .about__keyword__item {
     font-size: var(--medium-font-size);
@@ -105,9 +126,8 @@ section.about-skills .inner {
 .about__keyword__item img {
     padding-top: 5px;
 }
-/* >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
 .skills {
-    width: 1200px;
+    max-width: 1200px;
     margin: 0 auto;
     background: #50586C;
     color: #DCE2F0;
