@@ -89,13 +89,13 @@ $(function(){
         $skillsProgressWrap.stop().slideUp();
         $(this).siblings().stop().slideToggle();
         $(this).children().toggleClass('visible');
-    // skills progress
-    $('.pie_progress').asPieProgress({
-        namespace: 'pie_progress'
-    });
-    $('.pie_progress').asPieProgress('start');
     })
     
+    // skills progress
+        $('.pie_progress').asPieProgress({
+            namespace: 'pie_progress'
+        });
+        $('.pie_progress').asPieProgress('start');
     
     // portfolio slider
     $('.custom__slider').slick({
