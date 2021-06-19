@@ -4,35 +4,41 @@ $(function(){
     // header
     // header scroll event
     var $header = $('#header');
-    var $toggleSpan = $(".toggle span")
-    var $gnb = $('.gnb')
+    var $toggleSpan = $(".toggle span");
+    var $gnb = $('.gnb');
     $(window).scroll(function(){
         var scrollTop = $(window).scrollTop();
         var headerHeight = $('#header').outerHeight();
         var homeHeight = $('#home').outerHeight();
+        console.log(homeHeight)
         if( scrollTop > headerHeight ){
-            $header.addClass('fixed')
-            $toggleSpan.addClass('fixed')
+            $header.addClass('fixed');
+            $toggleSpan.addClass('fixed');
         }else{
             $header.removeClass('fixed');
             $toggleSpan.removeClass('fixed');
         }
-        if(scrollTop > homeHeight ){
-            $header.addClass('color')
-            $toggleSpan.addClass('color')
-            $gnb.addClass('color')
+
+
+        console.log(scrollTop);
+        console.log(homeHeight);
+
+        if(scrollTop >= homeHeight ){
+            $header.addClass('color');
+            $toggleSpan.addClass('color');
+            $gnb.addClass('color');
         }else{
-            $header.removeClass('color')
-            $toggleSpan.removeClass('color')
-            $gnb.removeClass('color')
+            $header.removeClass('color');
+            $toggleSpan.removeClass('color');
+            $gnb.removeClass('color');
         }
     })
     // gnb ele
-    var $toggle = $('.toggle'),
-    $gnb = $('.gnb');
+    var $toggle = $('.toggle');
+    var $gnbItem = $('.gnb__item');
     $($toggle).click(function(){
         $(this).toggleClass('active');
-        $($gnb).toggleClass('visible');
+        $($gnbItem).toggleClass('visible')
     })
     // gnb__item window scroll
     var $gnbMenu = $('.gnb__menu');
@@ -42,7 +48,13 @@ $(function(){
         var distance = $target.offset().top;
         $('html, body').animate({scrollTop: distance})
     })
-
+    var $homeScrollImg = $('.home__scroll__img');
+    $homeScrollImg.click(function(){
+        var target = $(this).attr('data-target');
+        var $target = $(target);
+        var distance = $target.offset().top;
+        $('html, body').animate({scrollTop: distance})
+    })
     // >>>>>>>>>>>>>>>>>>> tab
     var $subTitleTab = $('.sub__title__tab');
     var $aboutKeyword = $('.about__keyword');
@@ -70,26 +82,38 @@ $(function(){
     // skills accordion
     var $skillsTitle = $('.skills__title')
     var $skillsProgressWrap = $('.skills__progress__wrap');
-    var $skillsIcon = $('.skills_icon');
+    // var $skillsIcon = $('.skills_icon');
     
     $skillsProgressWrap.hide();
     $skillsTitle.click(function(){
-    $skillsProgressWrap.stop().slideUp();
-    $(this).siblings().stop().slideToggle();
-    $(this).children().toggleClass('visible');
-    })
+        $skillsProgressWrap.stop().slideUp();
+        $(this).siblings().stop().slideToggle();
+        $(this).children().toggleClass('visible');
     // skills progress
     $('.pie_progress').asPieProgress({
         namespace: 'pie_progress'
     });
     $('.pie_progress').asPieProgress('start');
+    })
     
-
-
+    
     // portfolio slider
     $('.custom__slider').slick({
         dots:true,
-        autoplay: true,
-        autoplaySpeed: 2000,
+        // autoplay: true,
+        // autoplaySpeed: 2000,
     });
+    
+    // portfolio design modal
+    $('.design__btn').click(function(e){
+        e.preventDefault();
+        $(this).siblings('.design__modal').show();
+        $('body').css("overflow", "hidden");
+    })
+    $('.design__modal').click(function(e){
+        if(e.target === e.currentTarget){
+            $(this).hide();
+            $('body').css("overflow", "scroll");
+        }
+    })
 })
