@@ -83,7 +83,6 @@
     align-items: center;
     right: 0;
     top: 0;
-    /* opacity: 0; */
     color: #fff;
     margin-right: 30px;
     overflow: hidden;
@@ -93,9 +92,10 @@
 }
 .gnb__item {
     transform: translateX(541px);
-    transition: .3s;
+    transition: .5s;
     margin-right: 40px;
     font-size: 1.6rem;
+    opacity: 0;
 }
 .gnb__item.visible {
     transform: translateX(0);
@@ -160,6 +160,9 @@ section.home:after {
     animation: mouse-scroll 1s infinite ease-out;
     text-align: center;
 }
+.home__scroll__img:hover p {
+    color: var(--primary-color);
+}
 .home__scroll__img p {
     font-size: 16px;
     color: #fff;
@@ -210,6 +213,7 @@ section.about-skills .inner {
 .sub__title h3:nth-of-type(1) {
     margin-right: 300px;
 }
+/* about */
 .about-wrap {
     position: relative;
     height: 462px;
@@ -279,13 +283,13 @@ section.about-skills .inner {
     visibility: visible;
 }
 .about__keyword__item:hover img {
-    filter: drop-shadow(0px 0px 3px yellow);
+    filter: drop-shadow(0 0 5px yellow);
 }
+/* skills */
 .skills {
     max-width: 1200px;
     margin: 0 auto;
-    background: #50586C;
-    color: #DCE2F0;
+    color: #fff;
 }
 .skills__item:nth-of-type(1) .skills__title {
     background: url(../images/section.about.skills/soilBg-1.png);
@@ -306,9 +310,7 @@ section.about-skills .inner {
 }
 .skills__desc {
     height: 500px;
-    /* padding: 1rem; */
-    color: #50586C;
-    background: #DCE2F0;
+    /* background: #DCE2F0; */
 }
 .skills_icon {
     font-size: 5rem;
@@ -323,11 +325,11 @@ section.about-skills .inner {
     display: flex;
     padding: 5rem;
     justify-content: space-around;
+    background: #fcf6f5;
 }
 .skills__progress_item {
     text-align: center;
     color: var(--point-color);
-    /* margin-right: 70px; */
 }
 .skills__progress_item span {
     display: inline-block;
@@ -339,7 +341,9 @@ section.about-skills .inner {
     margin: 0px auto;
     font-size: 26px;
 }
-
+.pie_progress__svg svg ellipse {
+    stroke: #ddd;
+}
 /* portfolio sider */
 .portfolio {
     padding: 100px 0 100px 0;
@@ -498,22 +502,52 @@ section.about-skills .inner {
 }
 .design__modal {
     background: rgba(0,0,0,0.2);
-    display: none;
     position: fixed;
     top: 0;
     left: 0;
     bottom: 0;
     right: 0;
     z-index: 999;
-    overflow-y: scroll;
+    display: none;
 }
 .design__mockup {
-    width: 850px;
-    height: 5000px;
     position: absolute;
     z-index: 9999;
+    width: 1400px;
+    height: 800px;
+    background: #fff;
+    top: 50%;
     left: 50%;
-    transform: translate(-50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+    padding: 5rem;
+    border-radius: 1rem;
+}
+.design__mockup__item {
+    position: absolute;
+    z-index: 9999;
+    width: 1300px;
+    height: 700px;  
+    overflow-y: scroll;
+    background: #fff;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+.modal__close__btn {
+    position: absolute;
+    z-index: 9999;
+    top: 10px;
+    right: 70px;
+    /* background: gold; */
+    width: 30px;
+    height: 30px;
+    font-size: 3rem;
+    cursor: pointer;
+}
+.modal__close__btn:hover {
+    color: var(--primary-color);
 }
 /* section.contact */
 section.contact {
@@ -595,6 +629,11 @@ input[type="submit"] {
     margin-top: 130px;
     width: 60%;
     text-align: center;
+    transition: .5s;
+}
+.contact__desc:hover {
+    color: var(--primary-color);
+    transform: scale(1.1);
 }
 .contact__desc .align {
     border: 1px solid #000;

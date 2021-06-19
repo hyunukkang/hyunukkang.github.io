@@ -90,12 +90,12 @@ $(function(){
         $(this).siblings().stop().slideToggle();
         $(this).children().toggleClass('visible');
     })
-    
+
     // skills progress
-        $('.pie_progress').asPieProgress({
-            namespace: 'pie_progress'
-        });
-        $('.pie_progress').asPieProgress('start');
+    $('.pie_progress').asPieProgress({
+        namespace: 'pie_progress'
+    });
+    $('.pie_progress').asPieProgress('start');
     
     // portfolio slider
     $('.custom__slider').slick({
@@ -107,13 +107,17 @@ $(function(){
     // portfolio design modal
     $('.design__btn').click(function(e){
         e.preventDefault();
-        $(this).siblings('.design__modal').show();
+        $(this).siblings('.design__modal').fadeIn().show();
         $('body').css("overflow", "hidden");
     })
     $('.design__modal').click(function(e){
         if(e.target === e.currentTarget){
-            $(this).hide();
+            $(this).fadeOut().hide();
             $('body').css("overflow", "scroll");
         }
+    })
+    $('.modal__close__btn').click(function(){
+        $('.design__modal').fadeOut().hide();
+        $('body').css("overflow", "scroll");
     })
 })
