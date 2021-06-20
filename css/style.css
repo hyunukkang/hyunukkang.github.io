@@ -371,11 +371,11 @@ section.about-skills .inner {
     height: 300px;
     position: relative;
     overflow: hidden;
-    cursor: pointer;
+    /* cursor: pointer; */
 }
 .slider__img:hover:after,
 .slider__img:hover p  {
-    opacity: 1;
+    opacity: 1; 
     transition: 500ms;
 }
 .slider__img:after {
@@ -445,6 +445,10 @@ section.about-skills .inner {
     font-size: var(--regular-font-size);
     line-height: 40px;
     text-align: center;
+}
+.slider__buttons a {
+    width: 100%;
+    display: block;
 }
 .slick__button:first-child {
     margin-right: var(--mb-1);
@@ -536,10 +540,13 @@ section.portfolio {
     transition: 200ms;
 }
 .portfolio__design .cover:hover {
-    transform: rotate(-10deg) scale(1.2);
+    transform: rotate(-5deg) scale(1.1);
     position: relative;
     z-index: 1;
 }
+.portfolio__design .l-grid-item:nth-of-type(2n) .cover:hover {
+    transform: rotate(5deg) scale(1.1)
+}   
 .portfolio__design .cover img {
     position: absolute;
     top: 0;
