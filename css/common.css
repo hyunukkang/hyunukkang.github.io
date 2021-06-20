@@ -9,6 +9,7 @@
     --point-color: #98dbf8;
     --desc-color: #ddd;
     /* typography */
+    --body-font: 'Noto Serif', serif;
     font-size: 62.5%;
     --h2-font-size: 3.6rem;
     --h3-font-size: 3rem;

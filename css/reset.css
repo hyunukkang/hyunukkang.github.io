@@ -3,6 +3,9 @@
     padding: 0;
     box-sizing: border-box;
 }
+body {
+    font-family: 'Noto Serif', 'Noto Sans KR', sans-serif;
+}
 ul {
     list-style: none;
 }
