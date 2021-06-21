@@ -47,6 +47,7 @@ $(function(){
         var $target = $(target);
         var distance = $target.offset().top;
         $('html, body').animate({scrollTop: distance})
+        // $($gnbItem).toggleClass('visible')
     })
     var $homeScrollImg = $('.home__scroll__img');
     $homeScrollImg.click(function(){
@@ -91,18 +92,21 @@ $(function(){
         $(this).children().toggleClass('visible');
     })
 
+    $skillsTitle.click(function(){
+
+    })
     // skills progress
     $('.pie_progress').asPieProgress({
         namespace: 'pie_progress'
     });
     $('.pie_progress').asPieProgress('start');
     
-    // portfolio slider
-    $('.custom__slider').slick({
-        dots:true,
-        // autoplay: true,
-        // autoplaySpeed: 2000,
-    });
+    // // portfolio slider
+    // $('.custom__slider').slick({
+    //     dots:true,
+    //     // autoplay: true,
+    //     // autoplaySpeed: 2000,
+    // });
     
     // portfolio design modal
     $('.design__btn').click(function(e){

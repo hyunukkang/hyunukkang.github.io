@@ -2,11 +2,11 @@
 
 :root {
     /* color */
-    --primary-color: #91bd0f;
-    --sub-color: #613c16;
+    --primary-color: #28df99;
+    /* --sub-color: #613c16; */
     --title-color: #232429;
     --bg-color: #292929;
-    --point-color: #98dbf8;
+    /* --point-color: #98dbf8; */
     --desc-color: #ddd;
     /* typography */
     --body-font: 'Noto Serif', serif;

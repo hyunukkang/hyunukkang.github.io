@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title></title>
+<style>
+    
+/* section.portfolio */
+.portfolio {
+    padding: 100px 0 100px 0;
+    border-top: 1px solid #ddd;
+}
+.portfolio .sub__title {
+    margin: 50px 0 50px 0;
+    color: var(--title-color);
+}
+/* publishing */
+.slick__button {
+    width: 150px;
+}
+.slider__button:hover {
+    background: #012129;
+}
+.custom__slider {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+.slider__content {
+    display: flex;
+    margin-bottom: 30px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.slider__img {
+    flex: 1;
+    max-width: 500px;
+    height: 500px;
+    position: relative;
+    overflow: hidden;
+}
+.slider__img:hover:after,
+.slider__img:hover p  {
+    opacity: 1; 
+    transition: 500ms;
+}
+.slider__img:after {
+    content: "";
+    position: absolute;
+    text-align: center;
+    line-height: 300px;
+    font-size: var(--medium-font-size);
+    color: #fff;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: rgba(0,0,0,0.2);
+    z-index: 1;
+    opacity: 0;
+}
+.slider__img p {
+    position: absolute;
+    z-index: 2;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    font-size: 3rem;
+    opacity: 0;
+}
+.slider__img img {
+    transition: .5s;
+    height: 100%;
+}
+.slider__img:hover img {
+    transform: scale(1.1);
+}
+.slider__desc {
+    width: 500px;
+    height: 500px;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    background: var(--bg-color);
+    color: var(--desc-color);
+}
+.slider__desc__content {
+    position: relative;
+    margin: 3rem;
+    height: 100%;
+    line-height: 1;
+}
+.slider__desc__content h4 {
+    font-size: var(--medium-font-size);
+    font-weight: normal;
+    margin-bottom: 30px;
+}
+.slider__desc__content p {
+    font-size: var(--regular-font-size);
+    line-height: 3rem;
+}
+.slider__buttons {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 90px;
+    height: 40px;
+    background: var(--primary-color);
+    border-radius: 10px;
+    font-size: var(--regular-font-size);
+    line-height: 40px;
+    text-align: center;
+}
+.slider__buttons a {
+    width: 100%;
+    display: block;
+}
+.slick__button:first-child {
+    margin-right: var(--mb-1);
+}
+
+/* arrow */
+.slick-prev,
+.slick-next
+{
+    position: absolute;
+    top: 35%;
+    /* transform: translateY(-50%); */
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    font-size: 0;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    padding-bottom: 70px;
+}
+.slick-prev {
+    left: -5rem;
+}
+.slick-next {
+    right: -5rem;
+}
+.slick-prev:after,
+.slick-next:after{
+    font-size: 6rem;
+    color: var(--sub-color);
+}
+.slick-prev:after,
+.slick-next:after{
+    font-family: unicons-line;
+}
+.slick-prev:after {
+    content: '\ec49';
+}
+.slick-next:after {
+    content: '\eb9f';
+}
+/* progress */
+.slick-dots {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    cursor: pointer;
+}
+/* active된 dot */
+.slick-dots li.slick-active button {
+    background: var(--primary-color);
+}
+/* 나머지 dot */
+.slick-dots li {
+    /* margin-right: .5rem; */
+    
+}
+.slick-dots li button {
+    background: #999;
+    width: 100px;
+    height: 10px;
+    font-size: 0;
+    border: none;
+    cursor: pointer;
+}
+
+/* portfolio__design */
+/* grid */
+section.portfolio {
+    border-bottom: 1px solid #ddd;
+}
+.portfolio__design .l-grid:after {
+    content:"";
+    display: block;
+    clear: both;    
+}
+.portfolio__design .l-grid-item {
+    float: left;
+}
+.portfolio__design .cover {
+    padding-top: 100%;
+    position: relative;
+    margin: 0.75rem;
+    border: 1px solid #eee;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: 200ms;
+}
+.portfolio__design .cover:hover {
+    transform: rotate(-5deg) scale(1.1);
+    position: relative;
+    z-index: 1;
+}
+.portfolio__design .l-grid-item:nth-of-type(2n) .cover:hover {
+    transform: rotate(5deg) scale(1.1)
+}   
+.portfolio__design .cover img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.design__modal {
+    background: rgba(0,0,0,0.2);
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 999;
+    display: none;
+}
+.design__mockup {
+    position: absolute;
+    z-index: 9999;
+    width: 1400px;
+    height: 800px;
+    background: #fff;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    padding: 5rem;
+    border-radius: 1rem;
+}
+.design__mockup__item {
+    position: absolute;
+    z-index: 9999;
+    width: 1300px;
+    height: 700px;  
+    overflow-y: scroll;
+    background: #fff;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+.modal__close__btn {
+    position: absolute;
+    z-index: 9999;
+    top: 10px;
+    right: 70px;
+    width: 30px;
+    height: 30px;
+    font-size: 3rem;
+    cursor: pointer;
+}
+.modal__close__btn:hover {
+    color: var(--primary-color);
+}
+</style>
+</head>
+<body>
+    <section id="portfolio" class="portfolio">
+        <div class="inner">
+            <h2 class="title">Portfolio</h2>
+            <div class="portfolio__publishing">
+                <h3 class="sub__title">Publishing</h3>
+                <!-- <div class="custom__slider">
+                    <div class="slider__content__wrap">
+                        <div class="slider__content">
+                            <a href="https://hyunukkang.github.io/cheileng-clone/">
+                                <div class="slider__img">
+                                    <img src="./images/section.portfolio/publishing/cheilng.jpg" alt="">
+                                    <p>cheileng</p>
+                                </div>
+                            </a>
+                            <div class="slider__desc">
+                                <div class="slider__desc__content">
+                                    <h4>제일엔지니어링 클론코딩</h4>
+                                    <p>
+                                        제작기간: 6일<br>
+                                        HTML: 1~2일 / CSS: 4일<br>
+                                        CSS활용도 심화와 반응현 구현
+                                        (toggle버튼 CSS구현)
+                                    </p>
+                                    <div class="slider__buttons">
+                                        <a href="https://github.com/hyunukkang/cheileng-clone" class="button slick__button" target="_blank">
+                                            CODE
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                    </div>
+                </div>
+                <div class="slider__content__wrap">
+                    <div class="slider__content">
+                        <a href=" https://hyunukkang.github.io/sidiz-clone/">
+                            <div class="slider__img">
+                                <img src="./images/section.portfolio/publishing/sidiz.jpg" alt="">
+                                <p>sidiz</p>
+                            </div>
+                        </a>
+                        <div class="slider__desc">
+                            <div class="slider__desc__content">
+                                <h4>시디즈 클론코딩</h4>
+                                <p>
+                                    제작기간: 3일<br>
+                                    HTML: 1일 / CSS: 3일<br>
+                                    HTML,CSS 구현 속도 높임
+                                </p>
+                                <div class="slider__buttons">
+                                    <a href="https://github.com/hyunukkang/sidiz-clone" class="button slick__button" target="_blank">
+                                        CODE
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="slider__content__wrap">
+                    <div class="slider__content">
+                        <a href="https://hyunukkang.github.io/hanwha-clone/">
+                            <div class="slider__img">
+                                <img src="./images/section.portfolio/publishing/hanwha.jpg" alt="">
+                                <p>Hanwha</p>
+                            </div>
+                        </a>
+                        <div class="slider__desc">
+                            <div class="slider__desc__content">
+                                <h4>한화솔루션 케미칼 클론코딩</h4>
+                                <p>
+                                    제작기간: 2일<br>
+                                    HTML: 1일 / CSS: 1일<br>
+                                    HTML, CSS 기본기와 반응형 구현
+                                </p>
+                                <div class="slider__buttons">
+                                    <a href="https://github.com/hyunukkang/hanwha-clone" class="button slick__button" target="_blank">
+                                        CODE
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div> -->
+            </div>
+            <div class="portfolio__design">
+                <h3 class="sub__title">Design</h3>
+                <div class="design__layout">
+                    <div class="l-grid">
+                        <div class="l-grid-item l-grid-4-12">
+                            <div class="cover design__btn">
+                                <a href="#">
+                                    <img src="./images/section.portfolio/design/poster-design.jpg" alt="">
+                                </a>
+                            </div>
+                            <div class="design__modal">
+                                <div class="design__mockup">
+                                    <div class="design__mockup__item">
+                                        <img src="./images/section.portfolio/design/poster-detail.png" alt="">
+                                    </div>
+                                    <div class="modal__close__btn">
+                                        <i class="uil uil-times"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="l-grid-item l-grid-4-12">
+                            <div class="cover design__btn">
+                                <a href="#">
+                                    <img src="./images/section.portfolio/design/brand-design.jpg" alt="">
+                                </a>
+                            </div>
+                            <div class="design__modal">
+                                <div class="design__mockup">
+                                    <div class="design__mockup__item">
+                                        <img src="./images/section.portfolio/design/brand-detail.png" alt="">
+                                    </div>
+                                    <div class="modal__close__btn">
+                                        <i class="uil uil-times"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="l-grid-item l-grid-4-12">
+                            <div class="cover design__btn">
+                                <a href="#">
+                                    <img src="./images/section.portfolio/design/mobile-site-design.png" alt="">
+                                </a>
+                            </div>
+                            <div class="design__modal">
+                                <div class="design__mockup">
+                                    <div class="design__mockup__item">
+                                        <img src="./images/section.portfolio/design/mobile-site-detail.png" alt="">
+                                    </div>
+                                    <div class="modal__close__btn">
+                                        <i class="uil uil-times"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="l-grid-item l-grid-4-12">
+                            <div class="cover design__btn">
+                                <a href="#">
+                                    <img src="./images/section.portfolio/design/website-design.png" alt="">
+                                </a>
+                            </div>
+                            <div class="design__modal">
+                                <div class="design__mockup">
+                                    <div class="design__mockup__item">
+                                        <img src="./images/section.portfolio/design/website-design-detail.jpg" alt="">
+                                    </div>
+                                    <div class="modal__close__btn">
+                                        <i class="uil uil-times"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="l-grid-item l-grid-4-12">
+                            <div class="cover design__btn">
+                                <a href="#">
+                                    <img src="./images/section.portfolio/design/app-design.png" alt="">
+                                </a>
+                            </div>
+                            <div class="design__modal">
+                                <div class="design__mockup">
+                                    <div class="design__mockup__item">
+                                        <img src="./images/section.portfolio/design/app-design-detail.png" alt="">
+                                    </div>
+                                    <div class="modal__close__btn">
+                                        <i class="uil uil-times"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="l-grid-item l-grid-4-12">
+                            <div class="cover design__btn">
+                                <a href="#">
+                                    <img src="./images/section.portfolio/design/mobile-site-design.png" alt="">
+                                </a>
+                            </div>
+                            <div class="design__modal">
+                                <div class="design__mockup">
+                                    <div class="design__mockup__item">
+                                        <img src="./images/section.portfolio/design/mobile-site-detail.png" alt="">
+                                    </div>
+                                    <div class="modal__close__btn">
+                                        <i class="uil uil-times"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
