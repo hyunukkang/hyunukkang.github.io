@@ -111,6 +111,7 @@ $(function(){
     // >>>>>>>> publishing slider
     $('.slider__custom').slick({
         dots: true,
+
         // infinite: true,
         // speed: 300,
         // autoplay: true,
@@ -125,13 +126,13 @@ $(function(){
                     arrows: false,
                     centerMode: true,
                     centerPadding: '40px',
-                    slidesToShow: 3
+                    slidesToShow: 1
                 }
             },
             {
                 breakpoint: 480,
                 settings: {
-                    arrows: false,
+                    arrows: true,
                     centerMode: true,
                     centerPadding: '40px',
                     slidesToShow: 1
@@ -156,4 +157,15 @@ $(function(){
         $('.design__modal').fadeOut().hide();
         $('body').css("overflow", "scroll");
     })
-})
+
+    // responsive
+    var mql = window.matchMedia("screen and (max-width: 768px)");
+
+    if (mql.matches) {
+    // console.log("화면의 너비가 768px 보다 작습니다.");
+
+    } else {
+        // console.log("화면의 너비가 768px 보다 큽니다.");
+    }
+
+    })

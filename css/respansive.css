@@ -1,0 +1,197 @@
+@charset "utf-8";
+
+@media (max-width: 768px) {
+    /* layout */
+    .inner {
+        max-width: 738px;
+    }
+    /* gnb */
+    .gnb__item {
+        margin-right: 20px;
+    }
+    /* home */
+    .home__title h1 {
+        font-size: 50px;
+        white-space: nowrap;
+    }
+    .home__title p {
+        font-size: 30px;
+        text-align: right;
+    }
+    h2.title {
+        text-align: center;
+    }
+    /* about-skills */
+    .about-skills h2 {
+        margin-bottom: 80px;
+    }
+    .about__keyword:nth-of-type(2) .about__keyword__item:nth-child(1) {
+        left: 20%;
+    }
+    .about__keyword:nth-of-type(2) .about__keyword__item:nth-child(3) {
+        left: 15%;
+    }
+    .about__keyword__item {
+        font-size: var(--medium-font-size);
+        position: absolute;
+    }
+    .about__keyword__item:nth-child(1) {
+        top: 20%;
+        left: 28%;
+    }
+    .about__keyword__item:nth-child(2) {
+        top: 28%;
+        left: 58%;
+    }
+    .about__keyword__item:nth-child(3) {
+        top: 50%;
+        left: 24%;
+    }
+    .about__keyword__item:nth-child(4) {
+        top: 56%;
+        left: 66%;
+    }
+    .about__keyword__item .balloon {
+        visibility: visible;
+    }
+    /* skills */
+    .skills__progress__container {
+        flex-wrap: wrap;
+    }
+    .skills__progress_item {
+        margin-right: 50px;
+        margin-bottom: 30px;
+    }
+    /* portfolio */
+    /* publishing */
+    .slider__content {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: .5rem;
+        text-align: center;
+    }
+    .slider__view-container {
+        display: block;
+        text-align: center;
+    }
+    .slider__img {
+        position: relative;
+        height: 200px;
+    }
+    .slider__img img {
+    }
+    .slider__desc--title {
+        font-size: var(--medium-font-size);
+        margin-left: 35px;
+    }
+    .slick-center .slider__view-button {
+        text-decoration: none;
+        color: inherit;
+        background: var(--bg-color);
+        color: var(--desc-color);
+        border-radius: .7rem;
+        margin-top: .5rem;
+        padding: .3rem 3rem;
+        text-align: center;
+        display: block;
+        margin-left: 40px;
+        margin-bottom: 20px;
+        font-size: 1rem;
+    }
+    .slick-center .slider__view-button:nth-of-type(1) {
+        margin-bottom: 0;
+    }
+
+    /* design */
+    .design__mockup {
+        position: absolute;
+        z-index: 9999;
+        width: 600px;
+        height: 800px;
+        background: #fff;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        padding: 5rem;
+        border-radius: 1rem;
+    }
+    .design__mockup__item {
+        position: absolute;
+        z-index: 9999;
+        width: 500px;
+        height: 700px;  
+        overflow-y: scroll;
+        background: #fff;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+    }
+    /* blog */
+    .blog__layout {
+        padding: 50px 0px 0px;
+    }
+    .blog__layout .cover {
+        margin: .75rem;
+    }
+    .blog__layout .grid-desc {
+        font-size: 1.6rem;
+        padding: 1rem;
+    }
+    
+
+    /* contact */
+    .contact__desc h1 {
+        font-size: var(--medium-font-size);
+    }
+    .contact__desc h3 {
+        font-size: var(--regular-font-size);
+    }
+    textarea[name="agree-document"] {
+        margin-left: 0;
+    }
+    label[for="personal-agree"] {
+        width: 230px;
+    }
+    input[type="checkbox"] {
+        margin-left: 0px;
+    }
+    .contact__summit {
+        margin-left: 0px;
+    }
+    .contact__desc {
+        color: var(--primary-color);
+        margin-top: 210px;
+    }
+}
+
+@media (max-width: 480px) {
+    /* home */
+    .home__title h1 {
+        font-size: 3rem;
+        white-space: nowrap;
+    }
+    .home__title p {
+        font-size: 1.5rem;
+        text-align: right;
+    }
+    /* about-skills */
+    .about__keyword__item .balloon {
+        visibility: hidden;
+    }
+    /* publishing */
+    .slick-dots button{
+        font-size: 0;
+        width: 50px;
+        height: 10px;
+        /* border-radius: 50%; */
+        margin-right: .5rem;
+        border: none;
+    }
+
+    section:nth-of-type(2) {
+        /* display: none; */
+    }
+}
