@@ -95,6 +95,10 @@
     font-size: 1.6rem;
     opacity: 0;
 }
+.gnb__item.color {
+    background: var(--bg-color);
+    color: var(--desc-color);
+}
 .gnb__item.visible {
     transform: translateX(0);
     opacity: 1;
@@ -416,6 +420,7 @@ section.about-skills .inner {
 }
 .slider__view-container {
     display: block;
+    
 }
 .slick-center .slider__view-button {
     text-decoration: none;

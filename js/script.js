@@ -6,6 +6,7 @@ $(function(){
     var $header = $('#header');
     var $toggleSpan = $(".toggle span");
     var $gnb = $('.gnb');
+    var $gnbItem = $('.gnb__item')
     $(window).scroll(function(){
         var scrollTop = $(window).scrollTop();
         var headerHeight = $('#header').outerHeight();
@@ -27,10 +28,12 @@ $(function(){
             $header.addClass('color');
             $toggleSpan.addClass('color');
             $gnb.addClass('color');
+            $gnbItem.addClass('color')
         }else{
             $header.removeClass('color');
             $toggleSpan.removeClass('color');
             $gnb.removeClass('color');
+            $gnbItem.removeClass('color')
         }
     })
     // gnb ele
@@ -47,7 +50,6 @@ $(function(){
         var $target = $(target);
         var distance = $target.offset().top;
         $('html, body').animate({scrollTop: distance})
-        // $($gnbItem).toggleClass('visible')
     })
     var $homeScrollImg = $('.home__scroll__img');
     $homeScrollImg.click(function(){
@@ -91,9 +93,9 @@ $(function(){
         $(this).siblings().stop().slideToggle();
         $(this).children().toggleClass('visible');
     })
-
+    
     $skillsTitle.click(function(){
-
+        
     })
     // skills progress
     $('.pie_progress').asPieProgress({
@@ -103,69 +105,67 @@ $(function(){
     
     // // portfolio slider
     // $('.custom__slider').slick({
-    //     dots:true,
-    //     // autoplay: true,
-    //     // autoplaySpeed: 2000,
-    // });
-    
-    // >>>>>>>> publishing slider
-    $('.slider__custom').slick({
-        dots: true,
-
-        // infinite: true,
-        // speed: 300,
-        // autoplay: true,
-        // autoplaySpeed: 3000,
-        centerMode: true,
-        // centerPadding: '20px',
-        slidesToShow: 3,
-        responsive: [
-            {
-                breakpoint: 768,
-                settings: {
-                    arrows: false,
-                    centerMode: true,
-                    centerPadding: '40px',
-                    slidesToShow: 1
+        //     dots:true,
+        //     // autoplay: true,
+        //     // autoplaySpeed: 2000,
+        // });
+        
+        // >>>>>>>> publishing slider
+        $('.slider__custom').slick({
+            dots: true,
+            
+            // infinite: true,
+            // speed: 300,
+            // autoplay: true,
+            // autoplaySpeed: 3000,
+            centerMode: true,
+            // centerPadding: '20px',
+            slidesToShow: 3,
+            responsive: [
+                {
+                    breakpoint: 769,
+                    settings: {
+                        arrows: false,
+                        centerMode: true,
+                        centerPadding: '40px',
+                        slidesToShow: 1
+                    }
+                },
+                {
+                    breakpoint: 480,
+                    settings: {
+                        arrows: false,
+                        centerMode: true,
+                        centerPadding: '40px',
+                        slidesToShow: 1
+                    }
                 }
-            },
-            {
-                breakpoint: 480,
-                settings: {
-                    arrows: true,
-                    centerMode: true,
-                    centerPadding: '40px',
-                    slidesToShow: 1
-                }
+            ]
+        });
+        
+        // portfolio design modal
+        $('.design__btn').click(function(e){
+            e.preventDefault();
+            $(this).siblings('.design__modal').fadeIn().show();
+            $('body').css("overflow", "hidden");
+        })
+        $('.design__modal').click(function(e){
+            if(e.target === e.currentTarget){
+                $(this).fadeOut().hide();
+                $('body').css("overflow", "scroll");
             }
-        ]
-    });
-
-    // portfolio design modal
-    $('.design__btn').click(function(e){
-        e.preventDefault();
-        $(this).siblings('.design__modal').fadeIn().show();
-        $('body').css("overflow", "hidden");
-    })
-    $('.design__modal').click(function(e){
-        if(e.target === e.currentTarget){
-            $(this).fadeOut().hide();
+        })
+        $('.modal__close__btn').click(function(){
+            $('.design__modal').fadeOut().hide();
             $('body').css("overflow", "scroll");
+        })
+        
+        // mobile responsive
+        if (matchMedia("screen and (min-width: 480px)").matches) {
+            $gnbMenu.click(function(){
+                $($gnbItem).toggleClass('visible')
+            })
         }
+        
     })
-    $('.modal__close__btn').click(function(){
-        $('.design__modal').fadeOut().hide();
-        $('body').css("overflow", "scroll");
-    })
-
-    // responsive
-    var mql = window.matchMedia("screen and (max-width: 768px)");
-
-    if (mql.matches) {
-    // console.log("화면의 너비가 768px 보다 작습니다.");
-
-    } else {
-        // console.log("화면의 너비가 768px 보다 큽니다.");
-    }
-
-    })
+    

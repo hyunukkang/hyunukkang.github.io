@@ -5,6 +5,20 @@
     .inner {
         max-width: 738px;
     }
+    /* grid tablet system */
+    .l-grid-tablet-1-12 { width: 8.33333333%; }
+    .l-grid-tablet-2-12 { width: 16.66666667%; }
+    .l-grid-tablet-3-12 { width: 25%; }
+    .l-grid-tablet-4-12 { width: 33.33333333%; }
+    .l-grid-tablet-5-12 { width: 41.66666667%; }
+    .l-grid-tablet-6-12 { width: 50%; }
+    .l-grid-tablet-7-12 { width: 58.33333333%; }
+    .l-grid-tablet-8-12 { width: 66.66666667%; }
+    .l-grid-tablet-9-12 { width: 75%; }
+    .l-grid-tablet-10-12 { width: 83.33333333%; }
+    .l-grid-tablet-11-12 { width: 91.66666667%; }
+    .l-grid-tablet-12-12 { width: 100%;}
+    
     /* gnb */
     .gnb__item {
         margin-right: 20px;
@@ -52,7 +66,7 @@
         left: 66%;
     }
     .about__keyword__item .balloon {
-        visibility: visible;
+        /* visibility: visible; */
     }
     /* skills */
     .skills__progress__container {
@@ -62,6 +76,7 @@
         margin-right: 50px;
         margin-bottom: 30px;
     }
+
     /* portfolio */
     /* publishing */
     .slider__content {
@@ -77,7 +92,7 @@
     }
     .slider__img {
         position: relative;
-        height: 200px;
+        height: 400px;
     }
     .slider__img img {
     }
@@ -85,6 +100,7 @@
         font-size: var(--medium-font-size);
         margin-left: 35px;
     }
+
     .slick-center .slider__view-button {
         text-decoration: none;
         color: inherit;
@@ -92,12 +108,13 @@
         color: var(--desc-color);
         border-radius: .7rem;
         margin-top: .5rem;
-        padding: .3rem 3rem;
+        /* padding: 1rem .5rem; */
+        width: 200px;
         text-align: center;
-        display: block;
-        margin-left: 40px;
+        /* display: block; */
+        margin-left: 30px;
         margin-bottom: 20px;
-        font-size: 1rem;
+        font-size: var(--medium-font-size);
     }
     .slick-center .slider__view-button:nth-of-type(1) {
         margin-bottom: 0;
@@ -137,61 +154,167 @@
         margin: .75rem;
     }
     .blog__layout .grid-desc {
-        font-size: 1.6rem;
-        padding: 1rem;
+        /* font-size: 1.6rem; */
+        /* padding: 1rem; */
     }
     
 
     /* contact */
-    .contact__desc h1 {
-        font-size: var(--medium-font-size);
+    form {
+        display: block;
+        /* border: 1px solid #000; */
+        width: 100%;
     }
-    .contact__desc h3 {
-        font-size: var(--regular-font-size);
+    .contact__wrap {
+        text-align: center;
+    }
+    .contact__summit {
+        margin: 0;
+        width: 100%;
+        text-align: center;
+    }
+    .contact__desc h1 {
+        /* font-size: var(--medium-font-size); */
+    }
+    .contact__desc .sub__title {
+        /* font-size: var(--regular-font-size); */
+        margin: 0;
+        text-align: center;
     }
     textarea[name="agree-document"] {
-        margin-left: 0;
+        /* margin-left: 0; */
     }
     label[for="personal-agree"] {
         width: 230px;
     }
     input[type="checkbox"] {
-        margin-left: 0px;
+        /* margin-left: 0px; */
     }
     .contact__summit {
-        margin-left: 0px;
+        /* margin-left: 0px; */
     }
     .contact__desc {
         color: var(--primary-color);
-        margin-top: 210px;
+        width: 100%;
+        margin: 50px 0;
+    }
+    .contact__desc:hover {
+        /* display: none; */
+        /* visibility: hidden; */
+    }
+    section:nth-of-type(5) {
+        /* display: none; */
     }
 }
 
 @media (max-width: 480px) {
+    /* layout */
+    body {
+        overflow-x: hidden;
+    }
+    .inner {
+        max-width: 450px;
+    }
+    /* grid mobile system */
+    .l-grid-mobile-1-12 { width: 8.33333333%; }
+    .l-grid-mobile-2-12 { width: 16.66666667%; }
+    .l-grid-mobile-3-12 { width: 25%; }
+    .l-grid-mobile-4-12 { width: 33.33333333%; }
+    .l-grid-mobile-5-12 { width: 41.66666667%; }
+    .l-grid-mobile-6-12 { width: 50%; }
+    .l-grid-mobile-7-12 { width: 58.33333333%; }
+    .l-grid-mobile-8-12 { width: 66.66666667%; }
+    .l-grid-mobile-9-12 { width: 75%; }
+    .l-grid-mobile-10-12 { width: 83.33333333%; }
+    .l-grid-mobile-11-12 { width: 91.66666667%; }
+    .l-grid-mobile-12-12 { width: 100%;}
+    /* gnb */
+    .gnb {
+        flex-direction: column;
+        overflow: visible;
+        /* background: red; */
+        margin-top: 60px;
+        overflow: hidden;
+        height: 500px;
+        transform: translateX(45px);
+    }
+    .gnb__item {
+        width: 150px;
+        visibility: hidden;
+    }
+    .gnb__item.visible {
+        transform: translateX(20px);
+        visibility: visible;
+    }
     /* home */
     .home__title h1 {
-        font-size: 3rem;
+        font-size: 3.5rem;
         white-space: nowrap;
     }
     .home__title p {
-        font-size: 1.5rem;
+        font-size: 2rem;
         text-align: right;
     }
     /* about-skills */
     .about__keyword__item .balloon {
-        visibility: hidden;
+        display: none;
+    }
+    .about__keyword:nth-of-type(2) .about__keyword__item:nth-child(1) {
+        left: 10%;
+    }
+    .about__keyword:nth-of-type(2) .about__keyword__item:nth-child(3) {
+        left: 5%;
+    }
+    .about__keyword__item span {
+        display: block;
+    }
+    .about__keyword__item:nth-child(1) {
+        top: 20%;
+        left: 10%;
+    }
+    .about__keyword__item:nth-child(2) {
+        top: 28%;
+        left: 70%;
+    }
+    .about__keyword__item:nth-child(3) {
+        top: 60%;
+        left: 0%;
+    }
+    .about__keyword__item:nth-child(4) {
+        top: 56%;
+        left: 80%;
+    }
+    .skills__progress__container {
+        flex-direction: column;
     }
     /* publishing */
-    .slick-dots button{
-        font-size: 0;
-        width: 50px;
-        height: 10px;
-        /* border-radius: 50%; */
-        margin-right: .5rem;
-        border: none;
+    .slick-center .slider__view-button {
+        display: block;
+        margin-left: 100px;
     }
-
-    section:nth-of-type(2) {
+    .slick-dots button{
+        width: 60px;
+    }
+    /* contact */
+    form {
+        display: block;
+        /* border: 1px solid #000; */
+        width: 100%;
+    }
+    .contact__desc h1 {
+        /* font-size: var(--medium-font-size); */
+        font-size: 3rem;
+    }
+    .contact__desc .sub__title {
+        font-size: 2rem;
+        margin: 0;
+        text-align: center;
+    }
+    section:nth-of-type(5) {
         /* display: none; */
+    }
+    /* footer */
+    .footer__left .copy {
+        width: 250px;
     }
 }
