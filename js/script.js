@@ -28,12 +28,10 @@ $(function(){
             $header.addClass('color');
             $toggleSpan.addClass('color');
             $gnb.addClass('color');
-            $gnbItem.addClass('color')
         }else{
             $header.removeClass('color');
             $toggleSpan.removeClass('color');
             $gnb.removeClass('color');
-            $gnbItem.removeClass('color')
         }
     })
     // gnb ele
@@ -161,11 +159,20 @@ $(function(){
         })
         
         // mobile responsive
-        if (matchMedia("screen and (min-width: 480px)").matches) {
+        if (matchMedia("screen and (max-width: 480px)").matches) {
             $gnbMenu.click(function(){
                 $($gnbItem).toggleClass('visible')
             })
+            $(window).scroll(function(){
+                var scrollTop = $(window).scrollTop();
+                var homeHeight = $('#home').outerHeight();
+
+                if(scrollTop >= homeHeight ){
+                    $gnbItem.addClass('color')
+                }else{
+                    $gnbItem.removeClass('color')
+                }
+            })
         }
-        
     })
     
