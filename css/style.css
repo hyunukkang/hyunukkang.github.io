@@ -434,7 +434,7 @@ section.about-skills .inner {
     color: #fff;
     display: inline-block;
     font-size: 6rem;
-
+    text-shadow: 1px 1px 8px #000;
 }
 .slick-center .slider__icons {
     margin: 2rem 0;
