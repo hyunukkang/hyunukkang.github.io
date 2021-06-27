@@ -109,9 +109,8 @@ $(function(){
         // });
         
         // >>>>>>>> publishing slider
-        $('.slider__custom').slick({
+        $('.publishing__slider').slick({
             dots: true,
-            
             // infinite: true,
             // speed: 300,
             // autoplay: true,
@@ -119,6 +118,7 @@ $(function(){
             centerMode: true,
             // centerPadding: '20px',
             slidesToShow: 3,
+            variableWidth: true,
             responsive: [
                 {
                     breakpoint: 769,
