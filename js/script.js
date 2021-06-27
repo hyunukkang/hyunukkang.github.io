@@ -162,6 +162,7 @@ $(function(){
         if (matchMedia("screen and (max-width: 480px)").matches) {
             $gnbMenu.click(function(){
                 $($gnbItem).toggleClass('visible')
+                $($toggle).removeClass('active')
             })
             $(window).scroll(function(){
                 var scrollTop = $(window).scrollTop();
