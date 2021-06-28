@@ -242,10 +242,10 @@ section.about-skills .inner {
     max-width: 100%;
 }
 .about__keyword:nth-of-type(2) .about__keyword__item:nth-child(1) {
-    left: 30%;
+    left: 28%;
 }
 .about__keyword:nth-of-type(2) .about__keyword__item:nth-child(3) {
-    left: 27%;
+    left: 25%;
 }
 .about__keyword__item {
     font-size: var(--medium-font-size);
@@ -256,7 +256,7 @@ section.about-skills .inner {
     left: 35%;
 }
 .about__keyword__item:nth-child(2) {
-    top: 28%;
+    top: 35%;
     left: 58%;
 }
 .about__keyword__item:nth-child(3) {
@@ -264,7 +264,7 @@ section.about-skills .inner {
     left: 30%;
 }
 .about__keyword__item:nth-child(4) {
-    top: 56%;
+    top: 65%;
     left: 63%;
 }
 .about__keyword__item .balloon {
@@ -287,6 +287,9 @@ section.about-skills .inner {
 {
     border-radius: 0 10px 10px 10px;
     left: 50px;
+}
+.about__keyword .about__keyword__item:nth-of-type(4) .balloon {
+    left: 30px;
 }
 .about__keyword:nth-of-type(2) .about__keyword__item:nth-of-type(1) .balloon,
 .about__keyword:nth-of-type(2) .about__keyword__item:nth-of-type(3) .balloon 
@@ -333,6 +336,7 @@ section.about-skills .inner {
     padding: 5rem;
     justify-content: space-around;
     background: #f0eee8;
+    /* background: var(--bg-color); */
 }
 .skills__progress_item {
     text-align: center;
@@ -638,10 +642,12 @@ section.blog {
     border-bottom: 1px solid #ddd;
 }
 section.blog .title {
-    text-align: center;
+    /* text-align: center; */
+    margin-bottom: 50px;
 }
 .blog__layout {
-    padding: 50px 150px 0px;
+    /* padding: 50px 150px 0px; */
+    /* border: 1px solid #000; */
 }
 .blog__layout .l-grid:after {
     content:"";
