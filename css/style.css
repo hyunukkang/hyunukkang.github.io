@@ -129,8 +129,21 @@
 /* section.home */
 section.home {
     position: relative;
-    background: url(../images/section.home/homeBg.png) no-repeat center/cover;
+    /* background: url(../images/section.home/homeBg.png) no-repeat center/cover; */
 }
+section.home .home__video-wrap {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+section.home .home__video-wrap video {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+}
+
 section.home .inner {
     position: relative;
     height: 100vh;
@@ -233,6 +246,9 @@ section.about-skills .inner {
     margin-right: 300px;
 }
 /* about */
+#about-skills {
+    position: relative;
+}
 .about-wrap {
     position: relative;
     height: 329px;
@@ -698,7 +714,15 @@ section.blog .title {
     background: var(--primary-color);
     color: #fff;
 }
-.blog__layout .cover:hover .grid-desc {
+.blog__layout .grid-desc span {
+    position: absolute;
+    right: 30px;
+    bottom: 30px;
+    font-size: 15px;
+    font-weight: normal;
+    color: #eee;
+}
+.blog__layout .cover:hover .grid-desc p {
     text-decoration: underline;
 }
 /* section.contact */

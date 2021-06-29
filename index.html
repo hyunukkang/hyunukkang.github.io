@@ -15,6 +15,7 @@
 <link rel="stylesheet" href="./css/style.css">
 <link rel="stylesheet" type="text/css" href ="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
 <link rel="stylesheet" href="./css/asPieProgress.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
 <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
 <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
@@ -67,13 +68,22 @@
     </header>
     <!-- section.home -->
     <section id="home" class="home">
-        <div class="home__title">
-            <h1>Publisher & Designer</h1>
-            <p>
-                __Grow with the web
-            </p>
-        </div>
-        <div class="inner">
+    <div class="home__video-wrap">
+        <video autoplay loop muted="muted">
+            <!-- <source src="./images/section.home/bg-geometry.mp4"> -->
+            <!-- <source src="./images/section.home/bg-square.mp4"> -->
+            <source src="./images/section.home/bg-tunnel.mp4">
+            <!-- <source src="./images/section.home/bg-Particles.mp4"> -->
+            <!-- <source src="./images/section.home/bg-circle.mp4"> -->
+        </video>
+    </div>
+    <div class="home__title">
+        <h1 class="animate__animated animate__slow animate__delay-1s animate__zoomIn">Publisher & Designer</h1>
+        <p class="animate__animated animate__slower animate__delay-2s animate__fadeIn">
+            __Grow with the web
+        </p>
+    </div>
+    <div class="inner">
             <div class="home__icon">
                 <a href="https://github.com/hyunukkang">
                     <i class="xi-github xi-5x"></i>
@@ -423,7 +433,6 @@
                 </div>
                 <!-- >>>>> -->
             <div class="inner">
-
                 <div class="portfolio__design">
                     <h3 class="sub__title">Design</h3>
                     <div class="design__layout">
@@ -548,7 +557,10 @@
                                 <img src="./images/section.blog/blog-1.png" alt="">
                             </div>
                             <div class="grid-desc">
-                                프로젝트가 끝나면 빠지지 않는 코드 분석 시간..!
+                                <p>
+                                    프로젝트가 끝나면 빠지지 않는 코드 분석 시간..!
+                                </p>
+                                <span>2021.02.23</span>
                             </div>
                         </a>
                     </div>
@@ -560,7 +572,10 @@
                                 <img src="./images/section.blog/blog-2.png" alt="">
                             </div>
                             <div class="grid-desc">
-                                CSS의 시작, inline, inline-block, block 기본기를 다지다
+                                <p>
+                                    CSS의 시작, inline, inline-block, block 기본기를 다지다
+                                </p>
+                                <span>2021.03.08</span>
                             </div>
                         </a>
                     </div>
@@ -572,7 +587,10 @@
                                 <img src="./images/section.blog/blog-3.gif" alt="">
                             </div>
                             <div class="grid-desc">
-                                position과 pseudo selector 의 조합!
+                                <p>
+                                    position과 pseudo selector 의 조합!
+                                </p>
+                                <span>2021.04.18</span>
                             </div>
                         </a>
                     </div>
@@ -584,7 +602,10 @@
                                 <img src="./images/section.blog/blog-4.gif" alt="">
                             </div>
                             <div class="grid-desc">
-                                float과 함께 시작된 그리드 시스템!
+                                <p>
+                                    float과 함께 시작된 그리드 시스템!
+                                </p>
+                                <span>2021.05.11</span>
                             </div>
                         </a>
                     </div>
@@ -596,7 +617,10 @@
                                 <img src="./images/section.blog/blog-5.gif" alt="">
                             </div>
                             <div class="grid-desc">
-                                jQuery를 배우기전 pure JS 를 익혀봅니다!
+                                <p>
+                                    jQuery를 배우기전 pure JS 를 익혀봅니다!
+                                </p>
+                                <span>2021.05.26</span>
                             </div>
                         </a>
                     </div>
@@ -608,7 +632,10 @@
                                 <img src="./images/section.blog/blog-6.gif" alt="">
                             </div>
                             <div class="grid-desc">
-                                JS의 기본을 배우고 jQuery를 마구마구 활용해보기!
+                                <p>
+                                    JS의 기본을 배우고 jQuery를 마구마구 활용해보기!
+                                </p>
+                                <span>2021.06.12</span>
                             </div>
                         </a>
                     </div>
