@@ -166,7 +166,7 @@ section.home:after {
     color: #fff;
     z-index: 1;
 }
-.home__title h1 {
+.home__title h5 {
     font-size: 80px;
 }
 .home__title p {
@@ -572,6 +572,14 @@ section.portfolio {
     /* border: 1px solid #000; */
     margin-top: 100px;
 }
+.portfolio__design .sub__title {
+    margin-bottom: 30px;
+}
+.portfolio__design span {
+    display: block;
+    text-align: right;
+    font-size: 1.5rem;
+}
 .portfolio__design .l-grid:after {
     content:"";
     display: block;
@@ -819,7 +827,7 @@ input[type="submit"] {
 .contact__desc .align {
     border: 1px solid #000;
 }
-.contact__desc h1 {
+.contact__desc h5 {
     font-size: 5rem;
 }
 .contact__desc .sub__title {
