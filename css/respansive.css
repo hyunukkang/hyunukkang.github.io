@@ -24,7 +24,7 @@
         margin-right: 20px;
     }
     /* home */
-    .home__title h1 {
+    .home__title h5 {
         font-size: 50px;
         white-space: nowrap;
     }
@@ -186,7 +186,7 @@
         width: 100%;
         text-align: center;
     }
-    .contact__desc h1 {
+    .contact__desc h5 {
         /* font-size: var(--medium-font-size); */
     }
     .contact__desc .sub__title {
@@ -260,7 +260,7 @@
         visibility: visible;
     }
     /* home */
-    .home__title h1 {
+    .home__title h5 {
         font-size: 3.5rem;
         white-space: nowrap;
     }
@@ -321,7 +321,7 @@
         /* border: 1px solid #000; */
         width: 100%;
     }
-    .contact__desc h1 {
+    .contact__desc h5 {
         /* font-size: var(--medium-font-size); */
         font-size: 3rem;
     }
