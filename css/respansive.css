@@ -77,6 +77,10 @@
     .about__keyword:nth-of-type(2) .about__keyword__item:nth-child(3) {
         left: 10%;
     }
+    .about__keyword--desc {
+        border: 1px solid #000;
+        display: none;
+    }
     /* skills */
     .skills__progress__container {
         flex-wrap: wrap;
